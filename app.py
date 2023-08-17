@@ -172,7 +172,7 @@ def analyze_file(file, sentence):
             score_formatted = "{:.2f}".format(score)
             output_text += f"{label}: {score_formatted}\n"
 
-        return None, None, output_text
+        return excel_file_path, pie_chart_name, output_text
     elif file:
         # Only file input is provided
         # Process the uploaded file and generate the output files
