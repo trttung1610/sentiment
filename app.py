@@ -203,4 +203,4 @@ interface = gr.Interface(
 
 
 if __name__ == "__main__":
-    interface.launch(share=True)
+    interface.launch()
