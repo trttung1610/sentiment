@@ -182,7 +182,7 @@ def analyze_file(file, sentence):
         return excel_file_path, pie_chart_name, None
 
 inputs = [
-    gr.inputs.File(label="Select File for Analysis"),
+    gr.inputs.File(label="Select File Docx (Word) for Analysis"),
     gr.inputs.Textbox(label="Enter Text")
 ]
 outputs = [
