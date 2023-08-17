@@ -139,6 +139,9 @@ def process_file(docx):
     return pie_chart_name, excel_file_path
 
 def analyze_file(file, sentence):
+    excel_file_path = None
+    pie_chart_name = None
+
     if file and sentence:
         # Both file and sentence inputs are provided
         # Process the uploaded file and generate the output files
@@ -156,7 +159,7 @@ def analyze_file(file, sentence):
             score_formatted = "{:.2f}".format(score)
             output_text += f"{label}: {score_formatted}\n"
 
-        return excel_file_path, pie_chart_name, output_text
+        return excel_file_path, pie_chart_name
     
     elif sentence:
         # Only sentence input is provided
@@ -171,24 +174,28 @@ def analyze_file(file, sentence):
         for label, score in zip(label_names, results):
             score_formatted = "{:.2f}".format(score)
             output_text += f"{label}: {score_formatted}\n"
+        
+        # Generate the pie chart and excel file
+        pie_chart_name = generate_pie_chart(pd.DataFrame([results], columns=['Negative', 'Neutral', 'Positive']))
+        excel_file_path = generate_excel_file(pd.DataFrame([results], columns=['Negative', 'Neutral', 'Positive']))
 
-        return excel_file_path, pie_chart_name, output_text
+        return excel_file_path, pie_chart_name
+
     elif file:
         # Only file input is provided
         # Process the uploaded file and generate the output files
         pie_chart_name, excel_file_path = process_file(file.name)
 
         # Return the file paths for the pie chart and excel file
-        return excel_file_path, pie_chart_name, None
+        return excel_file_path, pie_chart_name
 
 inputs = [
-    gr.inputs.File(label="Select File Docx (Word) for Analysis"),
+    gr.inputs.File(label="Select File for Analysis"),
     gr.inputs.Textbox(label="Enter Text")
 ]
 outputs = [
     gr.outputs.File(label="Analysis Result Excel"),
     gr.outputs.Image(type="filepath", label="Analysis Metrics"),
-    gr.outputs.Textbox(label="Analysis Result")
 ]
 
 
@@ -203,4 +210,4 @@ interface = gr.Interface(
 
 
 if __name__ == "__main__":
-    interface.launch()
+    interface.launch(share=True)
