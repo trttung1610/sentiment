@@ -1,7 +1,1 @@
-# Analyze Sentiment Conversation Text Record
----
-title: Sentiment Analysis System
-sdk: gradio
-sdk_version: 3.40.1
-app_file: app.py
----
+# Conversation Sentiment Analysis with PhoBert 
