@@ -190,12 +190,12 @@ def analyze_file(file, sentence):
         return excel_file_path, pie_chart_name
 
 inputs = [
-    gr.inputs.File(label="Select File for Analysis"),
-    gr.inputs.Textbox(label="Enter Text")
+    gr.File(label="Select File for Analysis"),
+    gr.Textbox(label="Enter Text")
 ]
 outputs = [
-    gr.outputs.File(label="Analysis Result Excel"),
-    gr.outputs.Image(type="filepath", label="Analysis Metrics"),
+    gr.File(label="Analysis Result Excel"),
+    gr.Image(type="filepath", label="Analysis Metrics"),
 ]
 
 
