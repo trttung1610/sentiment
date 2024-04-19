@@ -8,4 +8,5 @@ This app is designed to evaluate the general emotions within an entire conversat
   `python app.py`
 then click on the link displayed in the terminal to access the app.
 
-3. Enjoy exploring sentiment analysis in [your own cozy space](https://huggingface.co/spaces/trttung1610/vietnamese_sentiment_analysis/blob/main/app.py) ! 🤗
+3. Enjoy exploring sentiment analysis in [Hugging Space](https://huggingface.co/spaces/trttung1610/vietnamese_sentiment_analysis/blob/main/app.py) ! 🤗
+<img width="1283" alt="image" src="https://github.com/trttungdev/sentiment/assets/94973318/1b29f9f6-9a52-40fa-a41c-b9acdab39223">
