@@ -13,7 +13,8 @@ then click on the link displayed in the terminal to access the app.
 
 <img width="1283" alt="image" src="https://github.com/trttungdev/sentiment/assets/94973318/1b29f9f6-9a52-40fa-a41c-b9acdab39223">
 
-Processed : 
+OUTPUT : 
 
-<img width="1267" alt="image" src="https://github.com/trttungdev/sentiment/assets/94973318/5b96d5f8-fc6d-4448-af8b-875c435903d6">
+<img width="1258" alt="image" src="https://github.com/trttungdev/sentiment/assets/94973318/9f3b18da-243f-4e0c-a61e-0d8bdaf7c67f">
+
 
